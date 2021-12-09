@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FeedbackSystem.Api</name>
+    </assembly>
+    <members>
+        <member name="T:FeedbackSystem.Api.Controllers.FeedbackController">
+            <summary>
+            Feedback Controller Class
+            </summary>
+        </member>
+        <member name="M:FeedbackSystem.Api.Controllers.FeedbackController.#ctor(FeedbackSystem.Infrastructure.Interfaces.IFeedbackRepo,AutoMapper.IMapper,Microsoft.Extensions.Logging.ILogger{FeedbackSystem.Api.Controllers.FeedbackController})">
+            <summary>
+            ctor
+            </summary>
+            <param name="repo"></param>
+            <param name="mapper"></param>
+            <param name="logger"></param>
+        </member>
+        <member name="M:FeedbackSystem.Api.Controllers.FeedbackController.GetFeedbacks">
+            <summary>
+            Gets the feedbacks from the system.
+            </summary>
+            <returns>Feedbacks</returns>
+        </member>
+        <member name="M:FeedbackSystem.Api.Controllers.FeedbackController.GetFeedbackByEmailId(System.String)">
+            <summary>
+            Gets the feedback from the system based on email id.
+            </summary>
+            <returns>Feedback</returns>
+        </member>
+        <member name="M:FeedbackSystem.Api.Controllers.FeedbackController.AddFeedback(FeedbackSystem.Api.Dtos.FeedbackCreateDto)">
+            <summary>
+            Adds a feedback to the system.
+            </summary>
+            <returns>Feedback Created</returns>
+        </member>
+        <member name="M:FeedbackSystem.Api.Controllers.FeedbackController.PartialUpdateCommand(System.String,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{FeedbackSystem.Api.Dtos.FeedbackUpdateDto})">
+            <summary>
+            Updates the feedback individual property based on email Id.
+            </summary>
+            <returns>Feedback</returns>
+        </member>
+        <member name="M:FeedbackSystem.Api.Controllers.FeedbackController.UpdateFeedback(System.String,FeedbackSystem.Api.Dtos.FeedbackUpdateDto)">
+            <summary>
+            Updates the feedback in the system based email Id.
+            </summary>
+            <returns>Feedback</returns>
+        </member>
+        <member name="M:FeedbackSystem.Api.Controllers.FeedbackController.DeleteFeedback(System.String)">
+            <summary>
+            Delete a specific feedback in the system based on email id.
+            </summary>
+            <returns>Feedback</returns>
+        </member>
+        <member name="T:FeedbackSystem.Api.Middlewares.ExceptionHandlingMiddlerWare">
+            <summary>
+            This is MiddleWare class to customise the Unhandled excpetions
+            </summary>
+        </member>
+        <member name="M:FeedbackSystem.Api.Middlewares.ExceptionHandlingMiddlerWare.#ctor(Microsoft.Extensions.Logging.ILogger{FeedbackSystem.Api.Middlewares.ExceptionHandlingMiddlerWare})">
+            <summary>
+            Constructor of Middleware
+            </summary>
+            <param name="logger">Logger to log details</param>
+        </member>
+        <member name="M:FeedbackSystem.Api.Middlewares.ExceptionHandlingMiddlerWare.InvokeAsync(Microsoft.AspNetCore.Http.HttpContext,Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            Interface method to Invoke the RequestDelegate for HttpPipeline.
+            </summary>
+            <param name="context"></param>
+            <param name="next"></param>
+            <returns></returns>
+        </member>
+        <member name="T:FeedbackSystem.Api.Startup">
+            <summary>
+            WebApi Startup class
+            </summary>
+        </member>
+        <member name="M:FeedbackSystem.Api.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Ctor
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="M:FeedbackSystem.Api.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:FeedbackSystem.Api.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+    </members>
+</doc>

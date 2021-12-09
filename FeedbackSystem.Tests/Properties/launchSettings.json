@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FeedbackSystem.Tests": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

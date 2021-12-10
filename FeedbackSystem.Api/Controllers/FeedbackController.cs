@@ -110,7 +110,7 @@ namespace FeedbackSystem.Api.Controllers
         [HttpPatch("{emailId}")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public ActionResult PartialUpdateCommand(string emailId, JsonPatchDocument<FeedbackUpdateDto> patchDocument)
+        public ActionResult PartialUpdateFeedback(string emailId, JsonPatchDocument<FeedbackUpdateDto> patchDocument)
         {
             _logger.LogInformation($"Updating feedback with respective property {patchDocument}.");
             var existingFeedback = feedbackRepo.GetFeedbackByEmailId(emailId);

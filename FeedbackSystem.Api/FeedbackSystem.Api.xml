@@ -35,7 +35,7 @@
             </summary>
             <returns>Feedback Created</returns>
         </member>
-        <member name="M:FeedbackSystem.Api.Controllers.FeedbackController.PartialUpdateCommand(System.String,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{FeedbackSystem.Api.Dtos.FeedbackUpdateDto})">
+        <member name="M:FeedbackSystem.Api.Controllers.FeedbackController.PartialUpdateFeedback(System.String,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{FeedbackSystem.Api.Dtos.FeedbackUpdateDto})">
             <summary>
             Updates the feedback individual property based on email Id.
             </summary>

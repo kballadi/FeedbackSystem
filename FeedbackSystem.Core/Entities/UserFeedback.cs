@@ -24,12 +24,6 @@ namespace FeedbackSystem.Core.Entities
             get; set;
         }
 
-        //Navigation Properties
-        // public int QuestionId
-        // {
-        //     get; set;
-        // }
-
         public Questionaire Questionaire
         {
             get; set;
